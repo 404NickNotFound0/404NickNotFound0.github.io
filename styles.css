@@ -1,0 +1,155 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+nav {
+    background: #333;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav a, nav .dropdown {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s, color 0.3s;
+}
+
+nav a:hover, nav a.active, nav .dropdown:hover {
+    background: #555;
+    transform: scale(1.05);
+    color: #e0e0e0;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+.dropdown-content a {
+    color: #fff;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    display: block;
+    font-size: 0.9rem;
+}
+
+.dropdown-content a:hover {
+    background-color: #555;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.container {
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+h1, h2 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+section {
+    margin-bottom: 2rem;
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s, background 0.3s;
+}
+
+section:hover {
+    transform: scale(1.01);
+    background: #f1f1f1;
+}
+
+.card {
+    background: #fff;
+    padding: 1rem;
+    margin: 1rem 0;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    transition: transform 0.3s, background 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    background: #f7f7f7;
+}
+
+.card img {
+    max-width: 100px;
+    margin-right: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.flex-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.flex-container img {
+    margin-right: 1rem;
+}
+
+.footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 0.5rem;
+    font-size: 0.8rem;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav a, nav .dropdown {
+        padding: 0.5rem;
+        width: 100%;
+        text-align: center;
+    }
+
+    .flex-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .card img {
+        margin: 0 auto 1rem;
+    }
+
+    .footer {
+        position: static;
+        padding: 0.5rem;
+    }
+}
